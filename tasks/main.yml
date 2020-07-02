@@ -1,0 +1,48 @@
+---
+# tasks file for types
+- name: include assert.yml
+  include_tasks: assert.yml
+
+- name: show strings
+  debug:
+    msg: "{{ item }} is type {{ item | type_debug }}"
+  loop: "{{ types_strings }}"
+
+- name: test strings
+  assert:
+    that:
+      - item | type_debug == "str"
+  loop: "{{ types_strings }}"
+
+- name: show integers
+  debug:
+    msg: "{{ item }} is type {{ item | type_debug }}"
+  loop: "{{ types_integers }}"
+
+- name: test integers
+  assert:
+    that:
+      - item | type_debug == "int"
+  loop: "{{ types_integers }}"
+
+- name: show booleans
+  debug:
+    msg: "{{ item }} is type {{ item | type_debug }}"
+  loop: "{{ types_booleans }}"
+
+- name: test booleans
+  assert:
+    that:
+      - item | type_debug == "bool"
+  loop: "{{ types_booleans }}"
+
+- name: show floats
+  debug:
+    msg: "{{ item }} is type {{ item | type_debug }}"
+  loop: "{{ types_floats }}"
+
+- name: test floats
+  assert:
+    that:
+      - item | type_debug == "float"
+  loop: "{{ types_floats }}"

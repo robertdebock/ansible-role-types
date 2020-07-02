@@ -1,0 +1,28 @@
+---
+- name: test if types_strings is set correctly
+  assert:
+    that:
+      - types_strings is defined
+      - types_strings | length > 0
+      - types_strings is iterable
+
+- name: test if types_integers is set correctly
+  assert:
+    that:
+      - types_integers is defined
+      - types_integers | length > 0
+      - types_integers is iterable
+
+- name: test if types_booleans is set correctly
+  assert:
+    that:
+      - types_booleans is defined
+      - types_booleans | length > 0
+      - types_booleans is iterable
+
+- name: test if types_floats is set correctly
+  assert:
+    that:
+      - types_floats is defined
+      - types_floats | length > 0
+      - types_floats is iterable

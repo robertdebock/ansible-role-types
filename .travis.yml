@@ -1,0 +1,44 @@
+---
+#
+# Ansible managed
+#
+language: python
+
+python:
+  - "3.8"
+
+services:
+  - docker
+
+env:
+  global:
+    namespace="robertdebock"
+  matrix:
+    - image="alpine" tag="latest"
+    - image="alpine" tag="edge"
+    - image="debian" tag="latest"
+    - image="debian" tag="bullseye"
+    - image="centos" tag="7"
+    - image="centos" tag="latest"
+    - image="fedora" tag="31"
+    - image="fedora" tag="latest"
+    - image="fedora" tag="rawhide"
+    - image="opensuse" tag="latest"
+    - image="ubuntu" tag="latest"
+    - image="ubuntu" tag="bionic"
+    - image="ubuntu" tag="xenial"
+
+cache:
+  - pip
+
+install:
+  - pip install --upgrade pip
+  - pip install tox
+
+script:
+  - tox
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  slack: "Xd0fsW5dGA/TNEdMs5Ll1PH3oImFUbJBmYg1+QSUZERgVIYSpKa9qGfucP8/2wS8bWgFmOjhRSdopxA/lGhjg/+ObbWYcYECImqKVAdPyH9rbeQCsDLoUiJEdJ41PoG3S19uZQ3KjOMmDvy0cL1f6DnF4AYKJMakreH39xLy/nBghVUdkQzEywvltm84iqhY9LdDdUDnjgLiCZZ8VUfVMTO6p/gOX+xTx1IwC43dSSIT7czmva3upJLy7I2xrpDyM0aeSTWDW/cJFQ6T1Sc0e1xOYLmKtG30zUKEKKzFZnBUx3uLS5NoVMW+aP2l6PEkQy7RstYuFaoFmV2/9Ciqi6od63iaChR7pxD+8ixQmPdW9tfCvvTB15A0KJxvQA2hoIjI1FHZQBcqDNz+ydexj7sS+iflR4dFy6mFJkJPYkcjkxIpUvOKJmxF8j1Mu0qLqgQReDo18ikOMRVsZNTZi0HWb4t0bjI2i4ErUGgIF4nJPIUG4e45cjnI5GtnK+jWBXReFJzfo7bP2FWG+c7CyGEYKzRX8dRWwQzv5b++4Tdap0aukljXvsBMz4LxW3T90Rh0PAxP1voeIDcuITNQ8AfEJxZgbBHY/JhtwC8OQ8GM9Nvm2CtH1R6WZqn0BxRxoEDKdX+8ZjoYfQqh4Z2OFitdVQ7CBdH51x0pMEYOxHk="
+  email: false

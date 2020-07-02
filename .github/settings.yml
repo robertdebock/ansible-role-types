@@ -1,0 +1,7 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Try variables for their type.
+  homepage: https://robertdebock.nl/
