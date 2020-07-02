@@ -14,6 +14,17 @@
       - item | type_debug == "str"
   loop: "{{ types_strings }}"
 
+- name: show unsafes
+  debug:
+    msg: "{{ item }} is type {{ item | type_debug }}"
+  loop: "{{ types_unsaves }}"
+
+- name: test unsafes
+  assert:
+    that:
+      - item | type_debug == "AnsibleUnsafeText"
+  loop: "{{ types_strings }}"
+
 - name: show integers
   debug:
     msg: "{{ item }} is type {{ item | type_debug }}"

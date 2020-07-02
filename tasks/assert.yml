@@ -6,6 +6,13 @@
       - types_strings | length > 0
       - types_strings is iterable
 
+- name: test if types_unsafes is set correctly
+  assert:
+    that:
+      - types_unsafes is defined
+      - types_unsafes | length > 0
+      - types_unsafes is iterable
+
 - name: test if types_integers is set correctly
   assert:
     that:
