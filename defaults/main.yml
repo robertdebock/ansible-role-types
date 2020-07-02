@@ -6,11 +6,6 @@ types_strings:
   - "hello"
   - "1.2.3"
 
-# A list of AnsibleUnsafeText. (Unquoted strings)
-types_unsafes:
-  - hello
-  - 1.2.3
-
 # A list of integers.
 types_integers:
   - 0
