@@ -4,7 +4,7 @@ Try variables for their type.
 
 |Travis|GitHub|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-types.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-types)|[![github](https://github.com/robertdebock/ansible-role-types/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-types/actions)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/types)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/types)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-types.svg)](https://github.com/robertdebock/ansible-role-types/releases/)|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-types.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-types)|[![github](https://github.com/robertdebock/ansible-role-types/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-types/actions)|[![quality](https://img.shields.io/ansible/quality/49564)](https://galaxy.ansible.com/robertdebock/types)|[![downloads](https://img.shields.io/ansible/role/d/49564)](https://galaxy.ansible.com/robertdebock/types)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-types.svg)](https://github.com/robertdebock/ansible-role-types/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -56,8 +56,8 @@ These variables are set in `defaults/main.yml`:
 
 # A list of strings.
 types_strings:
-  - hello
-  - 1.2.3
+  - "hello"
+  - "1.2.3"
 
 # A list of integers.
 types_integers:
