@@ -37,7 +37,5 @@ galaxy_info:
 
   galaxy_tags:
     - types
-    - centos
-    - redhat
 
 dependencies: []
