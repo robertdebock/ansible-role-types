@@ -12,7 +12,7 @@
 - name: test strings
   assert:
     that:
-      - item | type_debug in ["str", "AnsibleUnsafeText"]
+      - item | type_debug in [ "str", "AnsibleUnsafeText" ]
   loop: "{{ types_strings }}"
 
 - name: show integers
