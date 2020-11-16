@@ -3,7 +3,6 @@
   assert:
     that:
       - types_strings is defined
-      - types_strings | length > 0
       - types_strings is iterable
     quiet: yes
 
@@ -11,7 +10,6 @@
   assert:
     that:
       - types_integers is defined
-      - types_integers | length > 0
       - types_integers is iterable
     quiet: yes
 
@@ -19,7 +17,6 @@
   assert:
     that:
       - types_booleans is defined
-      - types_booleans | length > 0
       - types_booleans is iterable
     quiet: yes
 
@@ -27,6 +24,5 @@
   assert:
     that:
       - types_floats is defined
-      - types_floats | length > 0
       - types_floats is iterable
     quiet: yes
