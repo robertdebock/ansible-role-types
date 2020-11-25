@@ -12,7 +12,7 @@
 - name: test strings
   assert:
     that:
-      - item | type_debug in [ "str", "AnsibleUnsafeText" ]
+      - item is string
   loop: "{{ types_strings }}"
 
 - name: show integers
@@ -23,7 +23,7 @@
 - name: test integers
   assert:
     that:
-      - item | type_debug == "int"
+      - item is number
   loop: "{{ types_integers }}"
 
 - name: show booleans
@@ -34,7 +34,7 @@
 - name: test booleans
   assert:
     that:
-      - item | type_debug == "bool"
+      - item is boolean
   loop: "{{ types_booleans }}"
 
 - name: show floats
@@ -45,5 +45,5 @@
 - name: test floats
   assert:
     that:
-      - item | type_debug == "float"
+      - item is float
   loop: "{{ types_floats }}"
