@@ -14,6 +14,7 @@
   assert:
     that:
       - item is string
+    quiet: yes
   loop: "{{ types_strings }}"
 
 - name: show integers
@@ -25,6 +26,7 @@
   assert:
     that:
       - item is number
+    quiet: yes
   loop: "{{ types_integers }}"
 
 - name: show booleans
@@ -36,6 +38,7 @@
   assert:
     that:
       - item is boolean
+    quiet: yes
   loop: "{{ types_booleans }}"
 
 - name: show floats
@@ -47,4 +50,5 @@
   assert:
     that:
       - item is float
+    quiet: yes
   loop: "{{ types_floats }}"
