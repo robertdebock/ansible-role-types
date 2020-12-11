@@ -2,9 +2,9 @@
 
 Try variables for their type.
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-types.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-types)|[![github](https://github.com/robertdebock/ansible-role-types/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-types/actions)|[![quality](https://img.shields.io/ansible/quality/49564)](https://galaxy.ansible.com/robertdebock/types)|[![downloads](https://img.shields.io/ansible/role/d/49564)](https://galaxy.ansible.com/robertdebock/types)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-types.svg)](https://github.com/robertdebock/ansible-role-types/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-types.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-types)|[![github](https://github.com/robertdebock/ansible-role-types/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-types/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-types/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-types)|[![quality](https://img.shields.io/ansible/quality/49564)](https://galaxy.ansible.com/robertdebock/types)|[![downloads](https://img.shields.io/ansible/role/d/49564)](https://galaxy.ansible.com/robertdebock/types)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-types.svg)](https://github.com/robertdebock/ansible-role-types/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -75,10 +75,11 @@ types_floats:
 
 ## [Requirements](#requirements)
 
-- Access to a repository containing packages, likely on the internet.
-- A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
+- pip packages listed in [requirements.txt](https://github.com/robertdebock/ansible-role-types/blob/master/requirements.txt).
 
 ## [Status of requirements](#status-of-requirements)
+
+The following roles are used to prepare a system. You may choose to prepare your system in another way, I have tested these roles as well.
 
 | Requirement | Travis | GitHub |
 |-------------|--------|--------|
