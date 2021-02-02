@@ -53,3 +53,13 @@
       - item is float
     quiet: yes
   loop: "{{ types_floats }}"
+
+- name: show map
+  debug:
+    msg: "{{ types_map }} is type {{ types_map | type_debug }}"
+
+- name: test map
+  assert:
+    that:
+      - types_map is mapping
+    quiet: yes
