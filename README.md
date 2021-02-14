@@ -71,6 +71,11 @@ types_booleans:
 types_floats:
   - 0.0
   - 0.1
+
+# A map.
+types_map:
+  value1: something
+  value2: not-something
 ```
 
 ## [Requirements](#requirements)
