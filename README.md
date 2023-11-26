@@ -1,4 +1,4 @@
-# Ansible role [types](#types)
+# [Ansible role types](#types)
 
 Try variables for their type.
 
